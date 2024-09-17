@@ -3,7 +3,7 @@ let apiUrl="https://66e84a14b17821a9d9dc20f9.mockapi.io/users";
 let usernameInput=document.getElementById('userNameInput');
 
 let emailInput=document.getElementById('emailInput');
-let userAbout=document.getElementById('userAbout')
+let userAbout=document.getElementById('userAbout');
 let passInput=document.getElementById('passInput');
 
 let signupBTN=document.getElementById('signupBTN');
@@ -32,6 +32,8 @@ signupBTN.addEventListener("click",()=>{
             }),
             headers: {"Content-Type": "application/json"}
         })
+        setInterval(()=>{window.location.href="index.html"},1000)
+       
+
     }
-    window.location.href="index.html"
 })

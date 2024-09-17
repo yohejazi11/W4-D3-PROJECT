@@ -4,6 +4,9 @@ let userId = sessionStorage.getItem('userId');
 
 let postContainer=document.getElementById('publicPostsContainer');
 
+let addPostNavBTN = document.getElementById('addPostNav');
+
+
 let nav=document.getElementById('navUl')
 let signA=document.getElementById('signA')
 let loginA=document.getElementById('loginA')
@@ -14,10 +17,26 @@ if(userId>0)
     loginA.remove()
     let profileA=document.createElement('a')
     let profileLI=document.createElement('li')
+    let logoutBTN = document.createElement('button')
+    let logoutLi = document.createElement('li')
     profileA.setAttribute('href','profile.html')
     profileA.textContent="Profile";
+    logoutBTN.textContent="sign out"
+    logoutLi.appendChild(logoutBTN)
     profileLI.appendChild(profileA)
     nav.appendChild(profileLI)
+    nav.appendChild(logoutLi)
+
+    logoutBTN.addEventListener("click",()=>{
+
+        sessionStorage.clear();
+        setInterval(()=>{
+            window.location.reload()
+        },1000)
+    })
+}
+else{
+    addPostNavBTN.remove()
 }
 
 fetch(apiURL)
@@ -57,6 +76,7 @@ let postTitle = document.getElementById('postTitle');
 let postContent = document.getElementById('postContent');
 
 let addPostBTN = document.getElementById('addPostBTN');
+
 
 
 

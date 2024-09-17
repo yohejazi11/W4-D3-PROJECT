@@ -1,3 +1,7 @@
+body{
+    background-color: #dce8e2;
+}
+
 header{
     display: flex;
     justify-content: space-between;
@@ -35,7 +39,8 @@ header{
 .public-posts-container{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    padding-top: 2rem;
     align-items: center;
     gap: 2rem;
     width: 100vw;

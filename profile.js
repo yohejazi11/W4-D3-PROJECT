@@ -13,18 +13,35 @@ if (userId > 0) {
     loginA.remove()
     let profileA = document.createElement('a')
     let profileLI = document.createElement('li')
+    let logoutBTN = document.createElement('button')
+    let logoutLi = document.createElement('li')
     profileA.setAttribute('href', 'profile.html')
     profileA.textContent = "Profile";
+    logoutBTN.textContent="sign out"
+    logoutLi.appendChild(logoutBTN)
     profileLI.appendChild(profileA)
     nav.appendChild(profileLI)
+    nav.appendChild(logoutLi)
+    logoutBTN.addEventListener("click",()=>{
+
+        sessionStorage.clear();
+        setInterval(()=>{
+            window.location.href="index.html"
+        },1000)
+    })
+
+
     let userName=document.getElementById('userName')
     let userAbout=document.getElementById('userAbout')
     fetch(apiUser)
-    .then(response => response.json)
+    .then(response => response.json())
     .then(data => {
         userName.textContent=data.username
         userAbout.textContent=data.about
     })
+}
+else{
+    window.location.href="index.html"
 }
 
 fetch(apiPost)
@@ -86,6 +103,7 @@ let addPostBTN = document.getElementById('addPostBTN');
 
 
 
+
 addPostBTN.addEventListener("click", () => {
     if (postTitle.value.length < 0) {
         window.alert("title should be more the five charachter")
@@ -104,6 +122,9 @@ addPostBTN.addEventListener("click", () => {
             }),
             headers: { "Content-Type": "application/json" }
         })
+        setInterval(()=>{  
+            window.location.reload();
+            },1000)
     }
 
 })
