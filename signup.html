@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
+
 <body>
     <header>
         <div>
@@ -17,17 +19,29 @@
             <li id="loginA"><a href="signup.html">sign up</a></li>
         </ul>
     </header>
-    <div class="signup-in-box"></div>
+    <div class="sign-up-box">
+        <h2 class="title" style="text-align: center;">sign up</h2>
+
+        <h2 class="title">user name:</h2>
 
         <input type="text" id="userNameInput" class="user-name-input">
-        <input type="email" required id="emailInput" class="email-input">
-        <textarea type="text" id="userAbout" class="user-about"></textarea>
-        <input type="password" required id="passInput" class="pass-input">
+        <h2 class="title">email:</h2>
 
-        <button id="signupBTN" class="signup-btn">sign in</button>
+        <input type="email" required id="emailInput" class="email-input">
+        <h2 class="title">password:</h2>
+
+        <input type="password" required id="passInput" class="pass-input">
+        <h2 class="title">bio:</h2>
+
+        <textarea type="text" id="userAbout" class="user-about"></textarea>
+
+        <button id="signupBTN" class="signup-btn">sign up</button>
 
     </div>
+
+
     <script src="signup.js"></script>
 
 </body>
+
 </html>

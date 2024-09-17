@@ -1,5 +1,6 @@
 body{
-    background-color: #dce8e2;
+    background-color: white;
+    height: 130vh;
 }
 
 header{
@@ -9,8 +10,10 @@ header{
     width: calc(100% - 6rem);
     height: 10vh;
     padding: 0 3rem;
-    background-color: #16423C;
-    box-shadow: 1px 7px 17px 0px #8b8b8b;
+    background-color: #384B70;
+    border-bottom: 5px solid #507687;
+    box-shadow: 1px 7px 17px 0px #8a8a8a;
+    margin-bottom: 2rem;
 
 }
 
@@ -26,49 +29,59 @@ header{
 }
 .nav-ul li button,
 .nav-ul li a{
-    font-size: 18px;
-    color: antiquewhite;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
     text-decoration: none;
 }
 
 .nav-ul li button{
-    background-color: transparent;
+    background-color: #507687;
+    height: calc(10vh + 10px);
     border: none;
+    border-bottom: 5px solid #384B70;
 }
 .my-posts-container,
 .public-posts-container{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding-top: 2rem;
     align-items: center;
+    width: 70%;
     gap: 2rem;
-    width: 100vw;
-    background-color: #dce8e2;
+    background-color: white;
     min-height: 100vh;
     margin: auto;
 }
 
+
 .post-box{
     display: flex;
     flex-direction: column;
-    width: 60%;
+    width: 100%;
     padding: 10px;
-    border-radius: 20px;
-    background-color: #dce8e2;
-    box-shadow: 1px 7px 17px 0px #8b8b8b;
-    border: 1px solid #16423C;
+    background-color: white;
+    box-shadow: 2px 4px 12px #87a0ab;
+    border-radius: 3px 10px 10px 3px;
+    border: 1px solid #507687;
+    border-left: 10px solid #507687;
 }
-
+.title{
+    text-align: center;
+    font-size: 1.5rem;
+    text-align: left;
+    color: #507687;
+    width: 100%;
+    margin: 0;
+}
 .post-title,
 .post-text{
-    border-left: 4px solid #16423C;
     padding-left: 10px;
+    color: #507687 ;
 }
 
 .post-title{
     height: 5vh;
-    border-bottom: 2px solid #16423C;
 
 }
 .post-text{
@@ -88,9 +101,12 @@ header{
     gap: 2rem;
     width: 50vw ;
     height: 70vh;
-    background-color: #C4DAD2 ;
-    border-radius: 10px;
+    background-color: white ;
+    border-radius: 3px 10px 10px 3px;
     transition: 0.5s;
+    border: 1px solid #507687;
+    border-left: 10px solid #507687;
+
     box-shadow: 1px 7px 17px 0px #8b8b8b;
 
 }
@@ -103,30 +119,31 @@ header{
     border: none;
     border-radius: 0;
     height: 5vh;
-    background-color: #E9EFEC;
-    color: #16423C;
+    background-color: white;
+    color: #507687;
     font-size: 1.1rem;
     padding-left:10px ;
-
-    border-left: 4px solid #16423C;
+    border: 1px solid #507687;
+    border-left: 4px solid #507687;
 }
 .add-post-box input:focus{
     outline: none;
 }
 .add-post-box input::placeholder{
-    color: #6A9C89;
+    color: #6f94a4;
     font-size: 1.1rem;
 }
 
 .add-post-box textarea{
     width: 80%;
     height: 20vh;
-    background-color: #E9EFEC;
-    color: #16423C;
+    background-color: white;
+    color: #507687;
     font-size: 1.1rem;
     padding-left:10px ;
     border: none;
-    border-left: 4px solid #16423C;
+    border: 1px solid #507687;
+    border-left: 4px solid #507687;
     outline: none;
 
 }
@@ -142,7 +159,7 @@ header{
 .add-post-btn{
     align-self: flex-end;
     width: 20%;
-    background-color: #16423C;
+    background-color: #507687;
     color: #E9EFEC;
     font-size: 1.5rem;
     font-weight: bold;
@@ -160,7 +177,7 @@ header{
     color: #16423C;
 }
 
-
+.sign-up-box,
 .log-in-box{
     position: absolute;
     top: 50%;
@@ -169,19 +186,73 @@ header{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    gap: 2rem;
+    align-items: flex-start;
+    gap: 1rem;
     margin: auto;
     width: 30vw;
     height: 40vh;
-    background-color: #C4DAD2 ;
-    border-radius: 15px;
+    padding: 0 15px;
+    background-color: white ;
+    border-radius: 3px 10px 10px 3px;
+    border: 1px solid #507687;
+    border-left: 10px solid #507687;
+    box-shadow: 2px 4px 12px #87a0ab;
+
 }
 
+.sign-up-box{
+    transform: translate(-50%,-30%);
+
+    height: 100vh;
+    width: 50vw;
+}
+.sign-up-box input,textarea,
 .log-in-box input{
-    width: 80%;
+    width: calc(100% - 10px);
+    height: 5vh;
+    border: 1px solid #507687;
+    border-radius: 3px;
+    outline: none;
+
+}
+.user-about{
+    height: 20vh;
+}
+.sign-up-box input:focus,
+.log-in-box input:focus{
+    outline: none;
 }
 
+.sign-up-box input:hover,
+.log-in-box input:hover{
+    outline: none;
+    height: calc(5vh - 3px);
+    border-bottom: 3px solid #384B70;
+}
+.delet-post-btn,
+.add-post-btn,
+.signup-btn,
+.signin-btn{
+    align-self: flex-end;
+    font-size: 18px;
+    background-color: #384B70;
+    color: white;
+    border: none;
+    height: 5vh;
+    width: 10vw;
+    border-radius: 3px;
+    border-left: 5px solid #507687;
+    transition: 0.3s;
+}
+.delet-post-btn:hover,
+.add-post-btn:hover,
+.signup-btn:hover,
+.signin-btn:hover{
+    background-color: #507687;
+    border-left: 5px solid #384B70;
+
+
+}
 .message{
     display: flex;
     flex-direction: column;
@@ -208,10 +279,21 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 80vw;
-    height: 50vh;
+    width: 70%;
+    height: 30vh;
     margin: 20px auto;
-    border-radius: 10px;
-    border: 1px solid #16423C;
+    background-color: white;
+    border-radius: 3px;
+    border: 1px solid #507687;
+    border-top: 10px solid #507687;
+    box-shadow: 0px 0px 20px 0px #c0bdbd;
 
+}
+
+footer{
+    position: absolute;
+    bottom: 0%;
+    height: 10vh;
+    width: 100%;
+    background-color: #507687;
 }
