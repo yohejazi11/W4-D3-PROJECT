@@ -32,8 +32,9 @@ signupBTN.addEventListener("click",()=>{
             }),
             headers: {"Content-Type": "application/json"}
         })
-        setInterval(()=>{window.location.href="index.html"},1000)
-       
+        setInterval(()=>{
+            window.location.href="index.html"},2000)
+    
 
     }
 })
