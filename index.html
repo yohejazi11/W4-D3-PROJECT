@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="blure-bg" id="blureBg">
+
+    </div>
+    <header>
+        <div>
+
+        </div>
+        <ul class="nav-ul" id="navUl">
+            <li><a href="index.html">HOME</a></li>
+            <li><button class="add-post-nav"id="addPostNav" onclick="showAddPostBox()">Add post</button></li>
+            <li id="signA"><a href="login.html">sign in</a></li>
+            <li id="loginA"><a href="signup.html">sign up</a></li>
+        </ul>
+    </header>
+    <div class="public-posts-container" id="publicPostsContainer">
+        <div class="post-box">
+            <h2 class="post-title">gdgf</h2>
+            <p class="post-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum libero, voluptas non reprehenderit esse
+                et soluta voluptate quis in tempora nobis, fugiat quidem animi a veniam saepe expedita laborum sed.</p>
+
+        </div>
+
+
+    </div>
+    <div class="add-post-box" id="addPostBox">
+        <button class="close-btn" onclick="hideAddPostBox()">X</button>
+        <h2>post you idea's</h2>
+        <input type="text" id="postTitle" class="post-title" placeholder="add post title">
+        <textarea type="text" id="postContent" class="post-content"></textarea>
+        <button id="addPostBTN" class="add-post-btn" onclick="hideAddPostBox()">post</button>
+    </div>
+    <script src="main.js"></script>
+
+    <script>
+        function showAddPostBox(){
+            let addPostBox=document.getElementById('addPostBox');
+                addPostBox.classList.add('show')
+        }
+        function hideAddPostBox(){
+            let addPostBox=document.getElementById('addPostBox');
+                addPostBox.classList.remove('show')
+        }
+    </script>
+</body>
+
+</html>
